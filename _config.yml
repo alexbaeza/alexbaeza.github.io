@@ -8,11 +8,10 @@ highlighter: rouge
 markdown: kramdown
 
 # Google Analytics Config
-#analytics: UA-XXXXXXXX-X # Google Analytics Id
+analytics: UA-153073592-1 # Google Analytics Id
 
 # Discuss Comments Config
-#disqus-shortname: my-blog-demo #Discuss Id
-
+disqus-shortname: code-faster #Discuss Id
 
 #optimization using compress.html
 compress_html:
