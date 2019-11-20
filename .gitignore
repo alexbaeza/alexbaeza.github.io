@@ -1,0 +1,11 @@
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+.idea
+vendor
+
+# general
+.DS_Store
+Thumbs.db
+ehthumbs.db
