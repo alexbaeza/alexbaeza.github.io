@@ -107,7 +107,7 @@ Note: There can only be one CMD instruction in a Dockerfile. If you list more th
 
 #### Voila! 
 Now that we have our first Dockerfile we will need to create 2 more (1 for each of the remaining services)
-To do this just copy and paste the same docker file and replace `app-service` with the target service (`data-retriever` or `classifier-service`) and change the port to your desired port
+To do this just copy and paste the same docker file and replace `app-service` with the target service (`data-retriever` or `classifier-service`) change the port to your desired port
 and place it on the root of each service.
 
 You'll should end up with the following structure:
