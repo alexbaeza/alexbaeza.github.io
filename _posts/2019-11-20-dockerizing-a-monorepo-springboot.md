@@ -52,9 +52,9 @@ WORKDIR /home/gradle/src
 RUN gradle build
 
 FROM openjdk:8-jdk-alpine
-EXPOSE 8091
 COPY --from=builder /home/gradle/src/build/libs/app-service-0.0.1-SNAPSHOT.jar /app/app-service.jar
 WORKDIR /app
+EXPOSE 8091
 CMD ["java","-XX:+UseG1GC", "-jar","app-service.jar"]
 
 ```
@@ -87,10 +87,6 @@ _RUN_ instruction tells Docker to execute a shell command-line within the target
 
 We select a new image. We have used 'openjdk' with tag '8-jdk-alpine'.
 
-`EXPOSE 8090`
-
-The _EXPOSE_ instruction informs Docker that the container listens on the specified network ports at runtime. Here we set our port to `8090`
-
 `COPY --from=builder /home/gradle/src/build/libs/app-service-0.0.1-SNAPSHOT.jar /app/app-service.jar`
 
 We copy the jar previously built as part of the "build image" to the new "run image".
@@ -98,6 +94,10 @@ We copy the jar previously built as part of the "build image" to the new "run im
 `WORKDIR /app`
 
 sets the working directory
+
+`EXPOSE 8090`
+
+The _EXPOSE_ instruction informs Docker that the container listens on the specified network ports at runtime. Here we set our port to `8090`
 
 `CMD ["java","-XX:+UseG1GC", "-jar","app-service.jar"]`
 
