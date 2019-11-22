@@ -10,7 +10,6 @@ markdown: kramdown
 # Google Analytics Config
 google:
   analytics: UA-153073592-1 # Google Analytics Id
-  verification: EvRXMEbIjnPErUooQcwYdUKzGx-ygrORZgmRxu7pqY8 # Google MetaTag Verification Id
 
 # Discuss Comments Config
 disqus-shortname: code-faster #Discuss Id
